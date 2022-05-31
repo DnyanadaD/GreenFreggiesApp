@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarServiceService } from '../navbar-service.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  constructor(public nav: NavbarServiceService) { }
 
   ngOnInit(): void {
+    this.nav.show()
+    this.nav.doSomethingElseUseful()
   }
 
 }

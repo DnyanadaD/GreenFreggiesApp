@@ -18,7 +18,8 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { Router, RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatIconModule} from '@angular/material/icon'
     FeedbackComponent,
     ErrorComponent,
     TransactionComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

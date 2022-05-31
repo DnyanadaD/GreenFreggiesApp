@@ -27,9 +27,11 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
+              
             ],
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/css/bootstrap.css"]
           },
           "configurations": {
             "production": {
@@ -91,7 +93,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src\favicon.png" 
             ],
             "styles": [
               "src/styles.css"

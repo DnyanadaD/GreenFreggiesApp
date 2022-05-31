@@ -1,0 +1,12 @@
+.navbar{
+    margin-top: 0.5px;
+    
+}
+a{
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: beige;
+}

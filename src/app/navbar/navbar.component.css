@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 .navbar{
     margin-top: 0.5px;
     
@@ -6,6 +7,10 @@ a{
     margin-top: 10px;
     color: white;
     text-decoration: none;
+    font-family:'Montserrat', sans-serif;
+    text-align: justify;
+    position:relative;
+    
 }
 a:hover{
     color: beige;

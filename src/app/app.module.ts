@@ -18,7 +18,7 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { Router, RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -57,7 +57,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path: '**', component:ErrorComponent,pathMatch:'full'},
     ]),
     BrowserAnimationsModule,
-    
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],

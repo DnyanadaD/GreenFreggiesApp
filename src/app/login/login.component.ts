@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators,FormGroup,FormControl,AbstractControl } from '@angular/forms';
 import { NavbarServiceService } from '../navbar-service.service';
+import { FooterService } from '../Services/footer.service';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +10,29 @@ import { NavbarServiceService } from '../navbar-service.service';
 })
 export class LoginComponent implements OnInit {
   LoginForm = this.fb.group({​​​​​
-  email: ['', Validators.required],});
-  constructor(private fb:FormBuilder,public nav: NavbarServiceService) { }
+  email: ['',[Validators.required,Validators.email]], 
+  password: ['', Validators.required]});
+  submitted = false;
+  constructor(private fb:FormBuilder,public nav: NavbarServiceService, public fs:FooterService) { }
 
   ngOnInit() {
     this.nav.show();
    this.nav.doSomethingElseUseful()
+   this.fs.show();
+}
+get password(){
+  return this.LoginForm.get('password');
+}
+get email(){
+	return this.LoginForm.get('email');
   }
+get f() { return this.LoginForm.controls; }
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.LoginForm.value);
+    this.submitted = true;
+    if (this.LoginForm.invalid) {
+      return;
+  }
+
+    
   }
 }

@@ -20,7 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component'
-
+import { SharedService } from './Services/shared.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,9 +60,10 @@ import { FooterComponent } from './footer/footer.component'
       {path: '**', component:ErrorComponent,pathMatch:'full'},
     ]),
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -22,6 +22,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component'
 import { SharedService } from './Services/shared.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TeamComponent } from './team/team.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     ErrorComponent,
     TransactionComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,7 @@ import { HttpClientModule } from '@angular/common/http';
       {path: 'log-out', component: LogOutComponent},
       {path: 'feedback', component: FeedbackComponent},
       {path: 'transaction', component: TransactionComponent},
+      {path: 'team',component:TeamComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: '**', component:ErrorComponent,pathMatch:'full'},
     ]),

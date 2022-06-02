@@ -3,7 +3,7 @@ import {MatTableModule} from '@angular/material/table'
 import { NavbarServiceService } from '../navbar-service.service';
 import { FooterService } from '../Services/footer.service';
 import studentData from '../student.json';
-interface Student{
+interface Students{
   Id:Number;
   Name:String;
   College:String;
@@ -24,7 +24,7 @@ export class TeamComponent implements OnInit {
     this.fs.show();
     this.fs.doSomethingElseUseful();
    }
-   students:Student[]=studentData;
+   students:Students[]=studentData;
    //displayedColumns: string[] = ['Id', 'Name', 'College', 'Email'];
    //dataSource = this.students;
 

@@ -6,7 +6,7 @@
           class="img-fluid" alt="Sample image" style="width: 650px;height: 200px;">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <form [formGroup]="SignUpform" (ngSubmit)="onSubmit(form)">
+        <form [formGroup]="SignUpform" (ngSubmit)="onSubmit()">
 
          <!-- User Name input -->
          <div class="form-group">
@@ -22,7 +22,7 @@
           <div class="form-group">
             <div *ngIf="email?.invalid && email?.touched" >
               <span>Email is invalid.</span></div>
-            <input formControlName="email" type="email" id="email" class="form-control form-control-lg"
+            <input formControlName="email" type="text" id="email" class="form-control form-control-lg"
               placeholder="Enter a valid email address" />
             <label class="form-label" for="form3Example3"></label>
             
@@ -42,7 +42,7 @@
            <div class="form-group">
             <div *ngIf="mobile?.touched && mobile?.invalid" >
               <span>Enter valid 10-digit mobile number.</span></div>
-              <input formControlName="mobile" type="tel" id="mobile" class="form-control form-control-lg"
+              <input formControlName="mobile" type="text" id="mobile" class="form-control form-control-lg"
                 placeholder="Enter your Mobile Number" />
               <label class="form-label" for="form3Example3"></label>
               
